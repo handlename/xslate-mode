@@ -1,0 +1,13 @@
+* xslate-mode
+  Tiny emacs minor mode for Text::Xslate template.
+
+* How to use
+  #+BEGIN_SRC emacs-lisp
+(require 'web-mode)
+(require 'xslate)
+(add-hook 'web-mode-hook
+          '(lambda ()
+             (cond
+              ((extension-match "tx")
+               (xslate-mode t)))))
+  #+END_SRC
